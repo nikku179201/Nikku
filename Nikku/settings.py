@@ -90,3 +90,16 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
+
+
+# enable the middleware
+DOWNLOADER_MIDDLEWARES = {'scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware': 610}
+# enable Zyte Proxy
+ZYTE_SMARTPROXY_ENABLED = True
+# the APIkey you get with your subscription
+ZYTE_SMARTPROXY_APIKEY = 'd1d3dfa7dc4444a88a253a0263be5877'
+
+AUTOTHROTTLE_ENABLED = False
+CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS_PER_DOMAIN = 32
+DOWNLOAD_TIMEOUT = 600 
